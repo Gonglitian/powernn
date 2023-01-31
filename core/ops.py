@@ -1,5 +1,7 @@
 """Tensor operations (with autograd context)"""
 import numpy as np
+
+
 def build_binary_ops_tensor(ts1, ts2, grad_fn_ts1, grad_fn_ts2, values):
     requires_grad = ts1.requires_grad or ts2.requires_grad
     dependency = []
@@ -18,6 +20,7 @@ def build_unary_ops_tensor(ts, grad_fn, values):
         dependency.append(dict(tensor=ts, grad_fn=grad_fn))
     tensor_cls = ts.__class__
     return tensor_cls(values, requires_grad, dependency)
+
 
 def handle_broadcasting(grad, ts):
     """
@@ -284,6 +287,7 @@ def pad_(ts, pad_width, mode):
     values = np.pad(ts.values, pad_width=pad_width, mode=mode)
     slices = list()
     for size, (before, after) in zip(values.shape, pad_width):
+        print(before, after)
         slices.append(slice(before, size-after))
 
     def grad_fn(grad):
@@ -343,7 +347,7 @@ def reshape(obj, newshape):
     return reshape_(to_Tensor(obj), newshape)
 
 
-def pad(obj, pad_width, mode="constant"):
+def pad(obj, pad_width, mode = "constant"):
     return pad_(to_Tensor(obj), pad_width, mode=mode)
 
 

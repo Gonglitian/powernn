@@ -37,6 +37,7 @@
 [numpy.pad()函数使用详解](https://blog.csdn.net/OuDiShenmiss/article/details/105618200)
 
 - [ ] pad的梯度计算
+- [ ] python `buildins.slice`
 
 ### nn
 
@@ -46,8 +47,7 @@
 ### layers
 
 + 重载`__repr__`方法
-+ 优化sigmoid
-+ RELU
++ 优化sigmoid（防溢出）
 
 ### evaluator
 
