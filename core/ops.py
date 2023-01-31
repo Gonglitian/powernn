@@ -42,7 +42,7 @@ def handle_broadcasting(grad, ts):
 
 def to_Tensor(obj):
     # avoid looping import
-    from core.Tensor import to_Tensor
+    from Tensor import to_Tensor
     return to_Tensor(obj)
 
 

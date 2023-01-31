@@ -40,7 +40,14 @@
 
 ### nn
 
++ 在Net类中加入层名称管理功能，对指定名称的层进行参数读写
++ 重载Net类的`__repr__`方法
+
 ### layers
+
++ 重载`__repr__`方法
++ 优化sigmoid
++ RELU
 
 ### evaluator
 
