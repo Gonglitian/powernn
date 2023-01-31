@@ -1,3 +1,3 @@
 .history/
-.autograd/
-.core/__pycache__
+autograd/
+core/__pycache__
