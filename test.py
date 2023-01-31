@@ -1,4 +1,4 @@
-from Tensor import *
+from core.Tensor import *
 # training data
 x = Tensor(np.random.normal(0, 1.0, (100, 3)))
 coef = Tensor(np.random.randint(0, 10, (3,)))
