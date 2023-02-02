@@ -1,5 +1,5 @@
 import numpy as np
-import ops as ops
+import core.ops as ops
 
 
 def to_Tensor(obj):
