@@ -3,7 +3,7 @@
 import numpy as np
 import scipy.stats as stats
 
-from Tensor import Tensor
+from core.Tensor import Tensor
 
 
 def get_fans(shape):

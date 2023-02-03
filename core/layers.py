@@ -2,9 +2,9 @@
 
 import numpy as np
 
-import ops as ops
-from initializer import XavierUniformInit
-from initializer import ZerosInit
+import core.ops as ops
+from core.initializer import XavierUniformInit
+from core.initializer import ZerosInit
 
 
 class Layer(object):

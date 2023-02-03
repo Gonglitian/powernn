@@ -2,16 +2,15 @@ from core.Tensor import *
 # training data
 x = Tensor(np.random.normal(0, 1.0, (100, 3)))
 coef = Tensor(np.random.randint(0, 10, (3,)))
-y = x * coef - 3 
-print(y.shape)
+y = x @ coef - 3 
 params = {
-    "w": Tensor(np.random.normal(0, 1.0, (3, 3)), requires_grad=True),
-    "b": Tensor(np.random.normal(0, 1.0, 3), requires_grad=True)
+    "w": Tensor(np.random.normal(0, 1.0, (3, )), requires_grad=True),
+    "b": Tensor(np.random.normal(0, 1.0, 1), requires_grad=True)
 }
 
 learng_rate = 3e-4
 loss_list = []
-for e in range(100):
+for e in range(1000):
     # set gradient to zero
     for param in params.values():
         param.zero_grad()
