@@ -3,7 +3,7 @@ from core.Tensor import *
 x = Tensor(np.random.normal(0, 1.0, (100, 3)))
 coef = Tensor(np.random.randint(0, 10, (3,)))
 y = x * coef - 3 
-
+print(y.shape)
 params = {
     "w": Tensor(np.random.normal(0, 1.0, (3, 3)), requires_grad=True),
     "b": Tensor(np.random.normal(0, 1.0, 3), requires_grad=True)
